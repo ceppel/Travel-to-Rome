@@ -1,0 +1,812 @@
+    *{
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        padding: 0;
+        margin: 0;
+        border: 0;}
+    *,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+    :focus,:active{outline: none;}
+    a:focus,a:active{outline: none;}
+    nav,footer,header,aside{display: block;}
+        input,button,textarea{font-family:inherit;}
+    input::-ms-clear{display: none;}
+    button{cursor: pointer;}
+    button::-moz-focus-inner{padding:0;border:0;}
+    img{vertical-align: top;} 
+    html,body{height:100%;
+        width:100%;
+        font-size:100%;
+        line-height:1;
+        font-size:14px;
+        -ms-text-size-adjust:100%;
+        -moz-text-size-adjust:100%;
+        -webkit-text-size-adjust:100%;
+    }
+    body {
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+    }
+
+
+    h1, h2, h3, h4, h5, h6 {
+	    padding: 0;
+	    margin: 0;
+    }
+
+    h1 {
+	    font-size: 90px;
+        line-height: 120px;
+    }
+
+    h2 {
+	    font-size: 50px;
+        line-height: 67px
+    }
+
+    h3 {
+	    font-size: 40px;
+        line-height: 50px;
+    }
+
+    h4 {
+	    font-size: 30px;
+        line-height: 40px;
+    }
+
+    a,a:visited{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+
+    section {
+	   padding-top: 35px	
+    }
+
+    p {
+        font-size: 25px;
+	    margin: 0;
+        color: #0F0F0F;
+    }
+
+    ul, li {
+	    margin: 0;
+        list-style-type: none;
+    }
+    
+    /*Начало шапки*/
+
+    .container {
+        width: 1230px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .header{
+        background-image: url(../images/Vatican.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .header__inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+    
+    .header__top{
+        padding: 32px 0 30px 0;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu__list {
+        display: flex;
+    }
+    
+    .menu-item{
+        margin-right: 30px;
+        color: #fff;
+    }
+    
+    .menu-link{
+        font-size: 18px;
+        line-height: 23px;
+        transition: color .5s;
+    }
+    
+    .menu-link:hover{
+        color: #7A57D1;
+    }
+    
+    .header__logo {
+        width: 130px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        margin: 6px 30px 0 0;
+    }
+    
+    .tel{
+        font-family: 'PT Sans';
+        font-weight: 400;
+        color: #fff;
+        font-size: 20px;
+        margin-left: auto;
+        transition: 0.5s;
+    }
+
+    .tel:hover{
+        color: #7A57D1;
+    }
+    
+    /*Начало гамбургер меню*/
+    .menu-btn{
+        display: none;
+        width: 40px;
+        padding: 0;
+        position: relative;
+        z-index: 20;
+        height: 30px;
+        background-color: #000000;
+    }
+      
+    .menu-btn span{
+        display: block;
+        height: 2px;
+        background-color: #fff;
+        position: relative;
+    }
+      
+    .menu-btn span::before,
+    .menu-btn span::after{
+        content: '';
+        width: 40px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+    }
+      
+    .menu-btn span::before{
+        top: -10px;
+    }
+      
+    .menu-btn span::after{
+        top: 10px;
+    }
+      
+    .how-to__box-list{
+        display: none;
+    }
+
+    /*Конец гамбургер меню*/
+    /*Конец шапки*/
+
+    .header__content{
+        margin-bottom: 270px;
+        max-width: 520px;
+    }
+    
+    .offer-p {
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: -15px;
+        color: #fff;
+    }
+    
+    .offer-h1 {
+        font-weight: 400;
+        font-size: 90px;
+        margin-bottom: 19px;
+        margin-top: -9px;
+        line-height: 120px;
+        margin-bottom: -10px;
+    }
+
+    .offer-h4 {
+        font-family: 'Playfair Display';
+        text-transform: none;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 28px;
+    }
+    
+    .btn {
+        font-family: 'Playfair Display';
+        font-weight: 400;
+        font-size: 25px;
+        text-align: center;
+        padding: 7px 38px;
+        border: 3px solid #fff;
+        width: 203px;
+        color: #7A57D1;
+        transition: .5s;
+    }
+    
+    .btn:hover {
+        background-color: #2F92C9;
+        color: #fff;
+    }
+    
+    /*Конец оффера*/
+
+    /*Начало 1-ой секции*/
+
+    .rome__item{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+    }
+
+    .title{
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 55px;
+        color: #0F0F0F; 
+    }
+
+    .rome-left{
+        width: 587px;
+    }
+
+    .rome-subtitle{
+        font-weight: 400;
+        color: #7A57D1;
+        margin-bottom: 16px;
+    }
+
+    .rome-left p{
+        margin-bottom: 20px;
+    }
+
+    .rome-images{
+        max-width: 100%;
+    }
+    
+    .rome-img{
+        position: relative;
+    }
+
+    .rome-img::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 21px;
+        bottom: 15px;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 2px solid #0F0F0F;
+    }
+    
+    .window-img{
+        position: relative;
+    }
+
+    .window-img::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: -19px;
+        bottom: 15px;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 2px solid #0F0F0F;
+    }
+
+    .rome-btn{
+        padding-right: 65px;
+        font-size: 20px;
+        line-height: 26,66px;
+        color: #7A57D1;
+        text-decoration: none;
+        background: url(../images/Arow.svg) no-repeat 100% center;
+    }
+
+    .rome-btn:hover{
+        padding-right: 80px;
+        color: #7143e4;
+    }
+
+    .right-small{
+        width: 435px;
+    }
+
+    .rome__item:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    /*Конец 1-ой секции*/
+
+    /*Начало 2-ой секции*/
+
+    :root{
+        --background-dark: #305fce;
+        --text-light: #7143e4;
+        --text-lighter: rgba(255,255,255,0.9);
+        --spacing-s: 8px;
+        --spacing-m: 16px;
+        --spacing-l: 24px;
+        --spacing-xl: 32px;
+        --spacing-xxl: 64px;
+        --width-container: 1200px;
+    }
+      
+    .card-grid{
+        display: grid;
+        grid-template-columns: 90px 90px;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        max-width: 1160px;
+        width: 100%;
+    }
+
+    @media(min-width: 540px){
+        .card-grid{
+          grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+      
+    @media(min-width: 960px){
+        .card-grid{
+          grid-template-columns: repeat(3, 1fr); 
+        }
+    }
+      
+    .card{
+        list-style: none;
+        position: relative;
+    }
+      
+    .card:before{
+        content: '';
+        display: block;
+        padding-bottom: 300px;
+        width: 370px;
+    }
+      
+    .card__background{
+        background-size: cover;
+        background-position: center;
+        bottom: 0;
+        filter: brightness(0.75) saturate(1.2) contrast(1.);
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform-origin: center;
+        transform: scale(1) translateZ(0);
+        transition: 
+        filter 200ms linear,
+        transform 200ms linear;
+    }
+      
+    .card:hover .card__background{
+        transform: scale(1.05) translateZ(0);
+    }
+      
+    .card-grid:hover > .card:not(:hover) .card__background{
+        filter: brightness(0.5) saturate(2) contrast(1.2) blur(20px);
+    }
+      
+    .card__content{
+        left: 0;
+        padding: var(--spacing-l);
+        position: absolute;
+        top: 0;
+    }
+      
+    .card__category{
+        font-family:'Playfair Display';
+        font-size: 20px;
+        color: #fff;
+        margin-top: 230px;
+    }
+
+    /*Конец 2-ой секции*/
+
+    /*Начало 3-ей секции*/
+    
+    .information__item{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+    }
+
+    .information__left{
+        width: 527px;
+        color: #000;
+    }
+
+    .information__block{
+        margin-bottom: 30px;
+    }
+
+    .information__block p{
+        color: #7A57D1;
+        margin-bottom: 15px;
+    }
+
+    .information__block li{
+        margin-left: 27px;
+        margin-bottom: 5px;
+        list-style-type: disc;
+    }
+
+    .information-img{
+        position: relative;
+    }
+
+    .information-img::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: -18px;
+        bottom: 36px;
+        width: 100%;
+        height: 97%;
+        background: #fff;
+        border: 2px solid #0F0F0F;
+    }
+    /*Конец 3-ей секции*/
+
+    /*Начало 4-ой секции*/
+    
+    .hotel__about{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .hotel__left{
+        width: 507px;
+    }
+
+    .hotel__left p{
+        margin-bottom: 20px;
+    }
+
+    .hotel-img{
+        position: relative;
+    }
+
+    .hotel-img::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 23px;
+        bottom: 24px;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 2px solid #0F0F0F;
+    }
+
+    .btn__hotel{
+        padding: 5px 38px;
+        color: #7A57D1;
+        border: 1px solid #0F0F0F;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    .btn__hotel:hover {
+        transition: .5s;
+        background-color: #2F92C9;
+        color: #fff;
+    }
+    /*Конец 4-ой секции*/
+    
+    /*Начало 5-ой секции*/
+    .tour__item{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .tour__left{
+        width: 507px;
+    }
+
+    .tour__left p{
+        margin-bottom: 20px;
+    }
+
+    .tour-img{
+        max-width: 100%;
+        position: relative;
+    }
+
+    .tour-img::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: -25px;
+        top: -18px;
+        width: 100%;
+        height: 58%;
+        background: #fff;
+        border: 2px solid #0F0F0F;
+    }
+
+    .tour__item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    /*Конец 5-ой секции*/
+
+    /*Начало 6-ой секции*/
+
+    .otzivi__item{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .otzivi__item h4{
+        color: #7A57D1;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+
+    .otzivi__item p{
+        margin-bottom: 15px;
+    }
+
+    .otzivi__item a{
+        color: #7A57D1;
+        font-size: 23px;
+        line-height: 22px;
+    }
+
+    .otzivi__left{
+        width: 520px;
+    }
+    
+    .otzivi-img{
+        max-width: 100%;
+    }
+
+    .am-next, .am-prev{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    .am-next{
+        border: #fff;
+        top: -63px;
+        left: 0px;
+    }
+    
+    .am-prev{  
+        border: #fff;
+        top: -63px;
+        left: 0px;
+    }
+    /*Конец 6-ой секции*/
+
+
+    /*Начало 7-ой секции*/
+    .rent{
+        background-image: url(../images/Run.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .login-box {
+        margin-top: 400px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+    }
+      
+    .login-box h3 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        margin: 0 10px 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+      
+    .login-box .user-box {
+        position: relative;
+    }
+      
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+    }
+
+    .login-box .user-box label {
+        position: absolute;
+        top:0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+    }
+      
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #7A57D1;
+        font-size: 12px;
+    }
+      
+    .login-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 30px;
+        letter-spacing: 4px;
+        border: 3px solid #0F0F0F;
+    }
+      
+    .login-box a:hover {
+        background: #2F92C9;
+        color: #fff;
+    }
+      
+    .login-box a span {
+        position: absolute;
+        display: block;
+    }
+
+    /*Конец 7-ой секции*/
+      
+    /*Начало секции Подвал*/
+    .footer {
+        display: flex;
+        flex-flow: row wrap;
+        color: #fff;
+        background-color: #000000;
+    }
+        
+    .r-footer {
+        display: flex;
+        flex-flow: row wrap;
+        width: 1160px;
+        margin: 0 auto;
+        margin-top: 47px; 
+        margin-bottom: 47px; 
+    }
+    
+    .footer > * {
+        flex:  1 100%;
+    }
+                
+    .footer ul {
+        list-style: none;
+        padding-left: 0;
+    }
+        
+    .footer li {
+        line-height: 2em;
+    }
+        
+    .footer a {
+        color: #fff;
+        font-size: 40px;
+        text-decoration: none;
+    }
+
+    .footer a:hover{
+        color: #7A57D1;
+    }
+
+    .box-1{
+        margin-right:70px;
+    }
+
+    .box-2{
+        margin-right:40px
+    } 
+    
+    .box-3{
+        margin-right:43px
+    }  
+
+    .features p{
+        color: #fff;
+    }
+    .social_networks{
+        display: inline;
+        margin-right: 20px;
+    }      
+        
+    .box a {
+        color: #fff;
+    }
+        
+    .h-box {
+        column-count: 2;
+        column-gap: 5px;
+    }
+        
+    .hr{
+        margin-bottom: 30px;
+    }
+    /*Конец секции Подвал*/
+
+    .carousel{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 170px;
+    }
+
+    .carousel__left{
+        width: 520px;
+    }
+
+    .carousel__left h4{
+        color: #7A57D1;
+        margin-bottom: 5px;
+    }
+
+    .carousel__left p{
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    
+    .am-next-2, .am-prev-2{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .am-prev-2{
+        top: -60px;
+        left: 562px;
+    }
+
+    .am-next-2{
+        top: -60px;
+        left: 562px;
+    }
